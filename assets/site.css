@@ -288,3 +288,9 @@ tbody th { font-weight: var(--weight-medium); }
   .subnav__list { flex-basis: 100%; }
   .subnav__bar > .lockup, .subnav__bar > .subnav__toggle { margin-block: var(--space-12); }
 }
+
+/* UMSO lockup: never wrap; between 1024 and 1199px show the logo alone so the menu fits on one line */
+.lockup__stack, .lockup__endorse { white-space: nowrap; }
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .lockup__stack, .lockup__divider:has(+ .lockup__stack) { display: none; }
+}
